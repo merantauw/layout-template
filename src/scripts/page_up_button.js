@@ -18,7 +18,6 @@ window.addEventListener('scroll', function(){
     }
 })
 
-
 pageUpButton.addEventListener('click', function() {
     window.scrollTo({
         top: 0,

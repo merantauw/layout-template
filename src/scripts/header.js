@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerLinkRight = document.querySelector('.header-link-right');
     const body = document.body;
 
-
-
     mobileMenuButton.addEventListener('click', function() {
         header.classList.toggle('expanded');
         headerInner.classList.toggle('expanded');
