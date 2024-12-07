@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = () => ({
   entry: {
     index: './src/pages/index.js',
+    contacts: './src/pages/contacts.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -93,8 +94,16 @@ module.exports = () => ({
       filename: 'index.html',
       chunks: ['index'],
       minify: false,
-      inject: 'body', // Вставляет скрипты перед закрывающим тегом </body>
+      inject: 'body',
     }),
+       new HtmlWebpackPlugin({
+      template: './src/pages/contacts.hbs',
+      filename: 'contacts.html',
+      chunks: ['contacts'],
+      minify: false,
+      inject: 'body',
+    }),
+
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/images', to: 'assets/images' },

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{> head }}
+<body>
+{{> header }}
+<div class="container">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+        <ul class="breadcrumbs-list">
+            <li class="crumb home">
+                <a href="/">
+                    <span>Главная</span>
+                </a>
+            </li>
+            <li class="crumb last ">
+                <span>Контакты</span>
+            </li>
+        </ul>
+    </nav>
+</div>
+<main class="main">
+    {{> contacts-section }}
+    {{> form-section }}
+</main>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=c887bbe2-2b52-4f23-b915-903bd365062a"></script>
+{{> footer }}
+</body>
+</html>
