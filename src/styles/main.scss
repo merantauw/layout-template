@@ -1,131 +1,62 @@
-@import "/src/styles/common/font_styles.scss";
-*,*::after,*::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-button{
-  border: none;
-}
-body {
-  position: relative;
-  font-family: 'HelveticaNeue', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: normal;
-  overflow-x: hidden;
-}
-.body-no-scroll {
-  overflow: hidden;
-}
-ul{
-  list-style: none;
-}
-a{
-  text-decoration: none;
-}
-h1,.h1 {
-  font-size: 80px;
-  font-weight: 700;
-  font-family: "TT_Livret_Display_Tri";
-  line-height: 130%;
-  text-transform: uppercase;
-}
-h2,.h2 {
-  color: #1C1C1C;
-  font-family: "TT_Livret_Display_Tri";
-  font-size: 80px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 130%;
-  text-transform: uppercase;
-  filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.3));
-}
-h3,.h3 {
-  color: #fff;
-  font-family: "TT_Livret_Display_Tri";
-  font-size: 120px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%;
-  letter-spacing: -1.2px;
-  text-transform: uppercase;
-  text-align: center;
-  max-width: 1495px;
-}
-h4,.h4 {
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120%; /* 38.4px */
-  text-transform: uppercase;
-}
+@import "~styles/common/font_styles.scss";
+@import "~styles/common/normalize.scss";
+@import "~styles/common/variables.scss";
 
-@media(max-width: 1440px) {
-  h3,.h3 {
-    font-size: 80px;
-  }
+body{
+  color: #000000;
+  font-family: Onest-Regular;
 }
-@media(max-width: 1200px) {
-  body {
-    padding: 0;
-  }
-
-  h1,.h1{
-    font-size: 60px;
-  }
-
-  h2,.h2 {
-    font-size: 42px;
-  }
-
-  h3,.h3 {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 420px){
-  h1,.h1{
-    font-size: 24px;
-    line-height: 130%;
-  }
-  h4,.h4{
-    font-size: 24px;
-    line-height: 130%;
-  }
+h1,h2,h3{
+  font-family: Furore;
 }
 
 .container {
-  max-width: 1920px;
+  max-width: 1710px;
+  width: 100%;
   margin: 0 auto;
-  overflow-x: hidden;
-}
-.hidden {
-  display: none;
-}
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
 }
 
-iframe {
-  width: 100%;
-  object-fit: contain;
-  object-position: center;
+.btn{
+  cursor: pointer;
+  transition: 0.3s all ease;
+  padding: 20px 50px;
 }
 
-.stretched::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
+.btn:hover{
+  box-shadow: $shadow;
+  transform: translateY(-2px);
+  transition: 0.3s all ease;
 }
 
-body{
-  padding: 45px;
+.btn:active{
+  transform: scale(0.97);
 }
+
+.btn--square-blue{
+  background-color: $blue-color;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000;
+}
+
+.btn--square-white{
+  background-color: $light-color;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000;
+}
+
+.btn--rounded-blue{
+  background-color: $blue-color;
+  color: #000000;
+  border-radius: 30px;
+  border: 1px solid #000;
+}
+
+.btn--rounded-white{
+  background-color: $light-color;
+  color: #000000;
+  border-radius: 30px;
+  border: 1px solid #000;
+}
+

@@ -15,8 +15,10 @@ module.exports = () => ({
   },
   resolve: {
     alias: {
-      scripts: path.resolve(__dirname, 'src/scripts')
-    }
+      scripts: path.resolve(__dirname, 'src/scripts'),
+      fonts: path.resolve(__dirname, 'src/fonts'),
+      styles: path.resolve(__dirname, 'src/styles'),
+    },
   },
   module: {
     rules: [
@@ -88,22 +90,22 @@ module.exports = () => ({
       filename: 'index.html',
       chunks: ['index'],
       minify: false,
-      inject: 'body',
+      inject: 'body', // Вставляет скрипты перед закрывающим тегом </body>
     }),
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/images', to: 'assets/images' },
       ],
     }),
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin(), // Добавьте этот плагин для HMR
   ],
   devServer: {
     static: path.join(__dirname, 'dist'),
     compress: true,
     port: 8000,
-    hot: true,
-    liveReload: true,
-    watchFiles: ['src/**/*.hbs'],
+    hot: true, // Включите HMR
+    liveReload: true, // Включите автоматическую перезагрузку страницы
+    watchFiles: ['src/**/*.hbs'], // Добавьте это для отслеживания изменений в .hbs файлах
   },
   mode: 'development',
   optimization: {

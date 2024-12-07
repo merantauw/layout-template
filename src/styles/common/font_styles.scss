@@ -1,76 +1,44 @@
-/*
 @font-face {
-    font-family: 'HelveticaNeue';
-    src:
-            url('../../fonts/HelveticaNeue-Roman.woff2') format('woff2'),
-            url('../../fonts/HelveticaNeue-Roman.woff') format('woff'),
-            url('../../fonts/HelveticaNeue-Roman.otf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Furore';
+  src: url('~fonts/Furore.woff2') format('woff2'),
+  url('~fonts/Furore.woff') format('woff'),
+  url('~fonts/Furore.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'HelveticaNeue';
-    src: url('../../fonts/HelveticaNeueMedium.woff2') format('woff2'),
-    url('../../fonts/HelveticaNeueMedium.woff') format('woff'),
-    url('../../fonts/HelveticaNeueMedium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Inter-Regular';
+  src: url('~fonts/Inter-Regular.woff2') format('woff2'),
+  url('~fonts/Inter-Regular.woff') format('woff'),
+  url('~fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'HelveticaNeue';
-    src: url('../../fonts/HelveticaNeue-Black.woff2') format('woff2'),
-    url('../../fonts/HelveticaNeue-Black.woff') format('woff'),
-    url('../../fonts/HelveticaNeue-Black.otf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: 'Inter-Medium';
+  src: url('~fonts/Inter-Medium.woff2') format('woff2'),
+  url('~fonts/Inter-Medium.woff') format('woff'),
+  url('~fonts/Inter-Medium.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'HelveticaNeue';
-    src: url('../../fonts/HelveticaNeue-Black.woff2') format('woff2'),
-    url('../../fonts/HelveticaNeue-Black.woff') format('woff'),
-    url('../../fonts/HelveticaNeue-Black.otf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'Onest-Regular';
+  src: url('~fonts/Onest-Regular.woff2') format('woff2'),
+  url('~fonts/Onest-Regular.woff') format('woff'),
+  url('~fonts/Onest-Regular.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'TT_Livret_Display_Tri';
-    src: url('../../fonts/TT_Livret_Display_Trial_Regular.woff2') format('woff2'),
-    url('../../fonts/TT_Livret_Display_Trial_Regular.woff') format('woff'),
-    url('../../fonts/TT_Livret_Display_Trial_Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Onest-EB';
+  src: url('~fonts/Onest-Extrabold.woff2') format('woff2'),
+  url('~fonts/Onest-Extrabold.woff') format('woff'),
+  url('~fonts/Onest-Extrabold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
 }
-
-@font-face {
-    font-family: 'TT_Livret_Display_Tri';
-    src: url('../../fonts/TT_Livret_Display_Trial_Medium.woff2') format('woff2'),
-    url('../../fonts/TT_Livret_Display_Trial_Medium.woff') format('woff'),
-    url('../../fonts/TT_Livret_Display_Trial_Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'TT_Livret_Display_Tri';
-    src: url('../../fonts/TT_Livret_Display_Trial_DemiBold.woff2') format('woff2'),
-    url('../../fonts/TT_Livret_Display_Trial_DemiBold.woff') format('woff'),
-    url('../../fonts/TT_Livret_Display_Trial_DemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'TT_Livret_Display_Tri';
-    src: url('../../fonts/TT_Livret_Display_Trial_Bold.woff2') format('woff2'),
-    url('../../fonts/TT_Livret_Display_Trial_Bold.woff') format('woff'),
-    url('../../fonts/TT_Livret_Display_Trial_Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-
-
-*/
