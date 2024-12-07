@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const webpack = require('webpack');
 
 module.exports = () => ({
   entry: {
@@ -18,6 +17,7 @@ module.exports = () => ({
       scripts: path.resolve(__dirname, 'src/scripts'),
       fonts: path.resolve(__dirname, 'src/fonts'),
       styles: path.resolve(__dirname, 'src/styles'),
+      images: path.resolve(__dirname, 'src/images'), // Добавьте алиас для изображений
     },
   },
   module: {
@@ -31,6 +31,9 @@ module.exports = () => ({
             options: {
               sourceMap: true,
             },
+          },
+          {
+            loader: 'resolve-url-loader',
           },
           {
             loader: 'sass-loader',
@@ -61,7 +64,7 @@ module.exports = () => ({
             options: {
               name: '[name].[ext]',
               outputPath: 'assets/images/',
-              publicPath: '../images/',
+              publicPath: 'assets/images/',
             },
           },
         ],
@@ -74,7 +77,7 @@ module.exports = () => ({
             options: {
               name: '[name].[ext]',
               outputPath: 'assets/fonts/',
-              publicPath: '../fonts/',
+              publicPath: '../fonts/', // Убедитесь, что publicPath указан правильно
             },
           },
         ],
@@ -95,9 +98,9 @@ module.exports = () => ({
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/images', to: 'assets/images' },
+        { from: 'src/fonts', to: 'assets/fonts' }, // Добавьте это для копирования шрифтов
       ],
     }),
-    new webpack.HotModuleReplacementPlugin(), // Добавьте этот плагин для HMR
   ],
   devServer: {
     static: path.join(__dirname, 'dist'),
