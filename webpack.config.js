@@ -7,6 +7,8 @@ module.exports = () => ({
   entry: {
     index: './src/pages/index.js',
     contacts: './src/pages/contacts.js',
+    company: './src/pages/company.js',
+    blog: './src/pages/blog.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -96,10 +98,24 @@ module.exports = () => ({
       minify: false,
       inject: 'body',
     }),
-       new HtmlWebpackPlugin({
+     new HtmlWebpackPlugin({
       template: './src/pages/contacts.hbs',
       filename: 'contacts.html',
       chunks: ['contacts'],
+      minify: false,
+      inject: 'body',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/company.hbs',
+      filename: 'company.html',
+      chunks: ['company'],
+      minify: false,
+      inject: 'body',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/blog.hbs',
+      filename: 'blog.html',
+      chunks: ['blog'],
       minify: false,
       inject: 'body',
     }),
