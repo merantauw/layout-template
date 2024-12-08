@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{> head }}
+<body>
+{{> header }}
+<div class="container">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+        <ul class="breadcrumbs-list">
+            <li class="crumb home">
+                <a href="index.html">
+                    <span>Главная</span>
+                </a>
+            </li>
+            <li class="crumb last ">
+                <span>Блог</span>
+            </li>
+        </ul>
+    </nav>
+</div>
+<main class="main">
+    {{> blog-section }}
+</main>
+{{> footer }}
+</body>
+</html>

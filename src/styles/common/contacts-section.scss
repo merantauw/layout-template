@@ -20,6 +20,7 @@
   }
   &__item-top,
   &__item-bottom{
+    box-shadow: $shadow;
     background-color: $light-color;
     border-radius: 20px;
     padding: 20px 40px;
