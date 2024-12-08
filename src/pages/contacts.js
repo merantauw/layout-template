@@ -6,4 +6,5 @@ import '../styles/common/form-section.scss';
 
 import '../scripts/yandex-map.js';
 import '../scripts/smooth.js';
+import '../scripts/header.js';
 

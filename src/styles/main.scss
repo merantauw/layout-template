@@ -18,7 +18,7 @@ h1,h2{
   font-size: 64px;
 }
 p{
-  line-height: 100%;
+  line-height: 140%;
 }
 
 h2{
@@ -34,6 +34,7 @@ h2{
   width: 100%;
   margin: 0 auto;
   position: relative;
+  padding: 0 10px;
 }
 
 .btn,
@@ -85,25 +86,52 @@ input{
   border: 1px solid #000;
 }
 
-.header{
+.header {
   padding-top: 30px;
-  &-top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Убедитесь, что это значение достаточно высокое, чтобы header был над всеми элементами */
+  transition: transform 0.3s ease;
+
+  &-top {
     display: flex;
     margin-bottom: 15px;
     justify-content: space-between;
     align-items: center;
-    .header-phone{
+
+    .header-phone {
       font-size: 32px;
     }
+
+    .mobile-menu-button {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+
+      .burger-line {
+        width: 25px;
+        height: 3px;
+        background-color: #000;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+      }
+    }
   }
-  &-bottom{
-    display: flex;
+
+  &.hidden {
+    transform: translateY(-300%);
+  }
+
+  &-bottom {
     justify-content: space-between;
     align-items: center;
     padding: 30px 50px;
     background-color: $blue-color;
     border-radius: 20px;
-    nav ul{
+
+    nav ul {
       display: flex;
       font-family: Inter-Regular, sans-serif;
       font-size: 32px;
@@ -111,18 +139,23 @@ input{
       align-items: center;
       gap: 72px;
     }
-    .header-search input{
+
+    .header-search input {
       padding: 6px 15px;
       border-bottom: 1px solid #000;
       text-align: right;
     }
-    .header-search input::placeholder{
+
+    .header-search input::placeholder {
       color: #000000;
       font-size: 20px;
     }
   }
 }
 
+nav.breadcrumbs{
+  padding-top: 170px;
+}
 .breadcrumbs-list{
     display: flex;
     margin-top: 50px;
@@ -255,5 +288,176 @@ input{
   &__privacy-policy:hover{
     color: $light-color;
     transition: 0.3s ease all;
+  }
+}
+
+@media (max-width: 1640px){
+  .header{
+    &-bottom{
+      padding: 25px;
+      nav ul{
+        gap: 40px;
+      }
+    }
+  }
+}
+@media (max-width: 1540px){
+  section{
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+
+  .header-bottom .header-search input{
+    max-width: 100px;
+  }
+  .header{
+    &-bottom{
+      nav ul{
+        gap: 20px;
+      }
+    }
+  }
+  .container{
+    padding: 0 25px;
+  }
+  .footer{
+    &__list-link,
+    &__phone,
+    &__email,
+    &__address{
+      font-size: 28px;
+    }
+    &__item-title{
+      font-size: 32px;
+    }
+  }
+}
+
+@media (max-width: 1290px){
+  h1,h2{
+    font-size: 52px;
+  }
+  .promo-block .content-promo-head{
+    max-width: 100% !important;
+  }
+  .header-bottom nav ul{
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1200px){
+  .footer{
+    &__phone,
+    &__email,
+    &__address,
+    &__list-link{
+      font-size: 24px;
+    }
+    &__inner-bottom{
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  h1,h2{
+    font-size: 38px;
+  }
+  .header-top .header-phone {
+    display: none;
+  }
+
+  .header-top .mobile-menu-button {
+    display: flex;
+  }
+
+  .header-bottom {
+    display: none; /* Скрываем по умолчанию на мобильных устройствах */
+  }
+
+  .header-bottom nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .header-bottom nav ul.expanded {
+    display: flex;
+  }
+
+  .header-bottom.expanded {
+    display: block; /* Отображаем при открытии мобильного меню */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 85px 20px 30px;
+    background-color: $blue-color; /* Фон для всего мобильного меню */
+    z-index: 1001; /* Убедитесь, что это значение достаточно высокое, чтобы меню было над всеми элементами */
+  }
+
+  .header-bottom.expanded .header-menu__item a {
+    display: block;
+    font-size: 24px; /* Увеличиваем шрифты */
+    padding: 10px 0; /* Добавляем padding */
+  }
+
+  .header-top.expanded {
+    background-color: $blue-color; /* Фон для верхней части шапки */
+  }
+
+  .body-no-scroll {
+    overflow: hidden; /* Запрещаем скроллить экран на фоне */
+  }
+
+  .header-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 1002; /* Убедитесь, что это значение достаточно высокое, чтобы кнопка бургер и логотип были над меню */
+    background-color: $blue-color; /* Фон для верхней части шапки */
+  }
+
+  .mobile-menu-button.expanded .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+
+  .mobile-menu-button.expanded .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-button.expanded .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .header-bottom .header-search input {
+    max-width: 100%;
+    width: 100%;
+    text-align: start;
+    border-bottom: none;
+    font-size: 24px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 1024px){
+  .footer{
+    padding: 50px 0 25px;
+    &__inner{
+      gap: 50px;
+      &-right{
+        justify-content: normal;
+      }
+      &-bottom{
+        margin-top: 0;
+      }
+    }
+  }
+  .footer__inner-left, .footer__inner-right{
+    max-width: 100%;
   }
 }

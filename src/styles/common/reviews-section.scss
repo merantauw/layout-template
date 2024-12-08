@@ -52,3 +52,19 @@
     line-height: 140%;
   }
 }
+
+@media (max-width: 1200px){
+  .reviews{
+    &__item-top{
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 1024px){
+  .reviews{
+    &__list{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
