@@ -9,6 +9,7 @@ module.exports = () => ({
     contacts: './src/pages/contacts.js',
     company: './src/pages/company.js',
     blog: './src/pages/blog.js',
+    blog_page: './src/pages/blog_page.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -20,7 +21,7 @@ module.exports = () => ({
       scripts: path.resolve(__dirname, 'src/scripts'),
       fonts: path.resolve(__dirname, 'src/fonts'),
       styles: path.resolve(__dirname, 'src/styles'),
-      images: path.resolve(__dirname, 'src/images'), // Добавьте алиас для изображений
+      images: path.resolve(__dirname, 'src/images'),
     },
   },
   module: {
@@ -116,6 +117,13 @@ module.exports = () => ({
       template: './src/pages/blog.hbs',
       filename: 'blog.html',
       chunks: ['blog'],
+      minify: false,
+      inject: 'body',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/blog_page.hbs',
+      filename: 'blog_page.html',
+      chunks: ['blog_page'],
       minify: false,
       inject: 'body',
     }),
