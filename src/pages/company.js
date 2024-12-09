@@ -10,5 +10,7 @@ import '../styles/common/gallery-section.scss';
 import '../styles/common/reviews-section.scss';
 import '../styles/common/form-section.scss';
 
+import '../styles/common/media.scss';
+
 import '../scripts/smooth.js';
 import '../scripts/header.js';

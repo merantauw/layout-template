@@ -13,6 +13,10 @@ h1,h2,h3{
   font-family: Furore, sans-serif;
   line-height: 140%;
 }
+h1{margin-top: 0;}
+h1.title{
+  margin-top: 30px;
+}
 
 h1,h2{
   font-size: 64px;
@@ -34,13 +38,13 @@ h2{
   width: 100%;
   margin: 0 auto;
   position: relative;
-  padding: 0 10px;
+  padding: 0 25px;
 }
 
 .btn,
 input{
   transition: 0.3s all ease;
-  padding: 20px 50px;
+  padding: 15px 35px;
   font-size: 22px;
 }
 
@@ -114,7 +118,7 @@ input{
         width: 25px;
         height: 3px;
         background-color: #000;
-        margin: 4px 0;
+        margin: 3px 0;
         transition: all 0.3s ease;
       }
     }
@@ -302,11 +306,6 @@ nav.breadcrumbs{
   }
 }
 @media (max-width: 1540px){
-  section{
-    padding-left: 25px !important;
-    padding-right: 25px !important;
-  }
-
   .header-bottom .header-search input{
     max-width: 100px;
   }
@@ -337,9 +336,6 @@ nav.breadcrumbs{
   h1,h2{
     font-size: 52px;
   }
-  .promo-block .content-promo-head{
-    max-width: 100% !important;
-  }
   .header-bottom nav ul{
     font-size: 28px;
   }
@@ -363,53 +359,52 @@ nav.breadcrumbs{
   h1,h2{
     font-size: 38px;
   }
+  nav.breadcrumbs{
+    padding-top: 80px;
+  }
   .header-top .header-phone {
     display: none;
   }
-
   .header-top .mobile-menu-button {
     display: flex;
   }
-
   .header-bottom {
-    display: none; /* Скрываем по умолчанию на мобильных устройствах */
+    display: none;
   }
-
   .header-bottom nav ul {
     display: none;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
   }
-
   .header-bottom nav ul.expanded {
     display: flex;
   }
 
   .header-bottom.expanded {
-    display: block; /* Отображаем при открытии мобильного меню */
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     padding: 85px 20px 30px;
-    background-color: $blue-color; /* Фон для всего мобильного меню */
-    z-index: 1001; /* Убедитесь, что это значение достаточно высокое, чтобы меню было над всеми элементами */
+    background-color: $blue-color;
+    z-index: 1001;
   }
 
   .header-bottom.expanded .header-menu__item a {
     display: block;
-    font-size: 24px; /* Увеличиваем шрифты */
-    padding: 10px 0; /* Добавляем padding */
+    font-size: 24px;
+    padding: 10px 0;
   }
 
   .header-top.expanded {
-    background-color: $blue-color; /* Фон для верхней части шапки */
+    background-color: $blue-color;
   }
 
   .body-no-scroll {
-    overflow: hidden; /* Запрещаем скроллить экран на фоне */
+    overflow: hidden;
   }
 
   .header-top {
@@ -417,13 +412,13 @@ nav.breadcrumbs{
     top: 0;
     left: 0;
     right: 0;
-    padding: 10px;
-    z-index: 1002; /* Убедитесь, что это значение достаточно высокое, чтобы кнопка бургер и логотип были над меню */
-    background-color: $blue-color; /* Фон для верхней части шапки */
+    padding: 25px;
+    z-index: 1002;
+    background-color: $blue-color;
   }
 
   .mobile-menu-button.expanded .burger-line:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 10px);
+    transform: rotate(45deg) translate(6px, 10px);
   }
 
   .mobile-menu-button.expanded .burger-line:nth-child(2) {
@@ -431,7 +426,7 @@ nav.breadcrumbs{
   }
 
   .mobile-menu-button.expanded .burger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(3px, -7px);
   }
 
   .header-bottom .header-search input {
@@ -441,6 +436,32 @@ nav.breadcrumbs{
     border-bottom: none;
     font-size: 24px;
     padding-left: 0;
+  }
+
+  @keyframes slideDown {
+    from {
+      border-bottom-width: 0;
+    }
+    to {
+      border-bottom-width: 2px;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      border-bottom-width: 2px;
+    }
+    to {
+      border-bottom-width: 0;
+    }
+  }
+
+  .header-bottom.expanded .header-search input {
+    animation: slideDown 0.3s ease-in-out forwards;
+  }
+
+  .header-bottom:not(.expanded) .header-search input {
+    animation: slideUp 0.3s ease-in-out forwards;
   }
 }
 

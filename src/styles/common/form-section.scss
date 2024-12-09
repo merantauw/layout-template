@@ -36,20 +36,3 @@ form.form{
   }
 }
 
-@media (max-width: 1200px){
-  form.form {
-    max-width: 450px;
-  }
-}
-
-@media (max-width: 1100px){
-  form.form{
-    max-width: 100%;
-  }
-  .form-section__right{
-    img{display: none;}
-  }
-  .form-section__title{
-    max-width: 100%;
-  }
-}

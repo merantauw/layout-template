@@ -35,6 +35,19 @@
   &__social{
     display: inline-block;
   }
+  &__social:hover{
+    color: #000000;
+  }
+  &__wa:hover svg{
+    path:first-child{
+      fill: $blue-color;
+    }
+  }
+  &__tg:hover svg{
+    path:first-child{
+      fill: $blue-color;
+    }
+  }
   &__label,
   &__value{
     font-size: 30px;

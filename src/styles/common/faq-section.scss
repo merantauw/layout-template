@@ -40,6 +40,7 @@
     transition: max-height 0.3s ease;
     padding: 0 15px;
     p {
+      margin-top: 15px;
       padding-bottom: 24px;
       line-height: 140%;
       font-size: 32px;
@@ -57,13 +58,3 @@
   }
 }
 
-@media (max-width: 1200px){
-  .faq{
-    &__header p{
-      font-size: 32px;
-    }
-    &__content p{
-      font-size: 24px;
-    }
-  }
-}

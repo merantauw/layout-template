@@ -11,6 +11,7 @@ import '../styles/common/working-stages-section.scss';
 import '../styles/common/reviews-section.scss';
 import '../styles/common/faq-section.scss';
 import '../styles/common/seo-section.scss';
+import '../styles/common/media.scss';
 
 import '../scripts/goods-section.js';
 import '../scripts/header.js';
