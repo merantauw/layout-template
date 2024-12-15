@@ -113,6 +113,28 @@
     max-width: 100%;
     text-align: center;
   }
+  .contacts{
+    &__inner{
+      gap: 45px;
+    }
+    &__value{
+      font-size: 24px;
+    }
+    &__inner-left{
+      max-width: 40%;
+    }
+    &__inner-right{
+      max-width: 60%;
+    }
+  }
+  .articles{
+    &__info{
+      max-width: 60%;
+    }
+    &__info-text{
+      font-size: 24px;
+    }
+  }
 }
 
 @media (max-width: 1100px) {
@@ -189,6 +211,24 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
+  .articles{
+    &__wrapper{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    &__info{
+      max-width: 100%;
+    }
+    &__info-title{
+      font-size: 28px;
+    }
+    &__item{
+      flex-direction: column;
+      padding: 30px;
+    }
+  }
 }
 
 @media (max-width: 960px){
@@ -256,9 +296,27 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 @media (max-width: 768px){
+  h1.title{margin-top: 0;}
+  .goods{
+    &__btn{
+      margin-top: 0;
+    }
+  }
+  .form-section form.form input{
+    font-size: 18px;
+  }
+  .form-section__title{
+    text-align: center;
+  }
+  .footer__socials{
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+  }
   .stages{
     &__list{
       gap: 25px;
@@ -269,6 +327,34 @@
     }
     &__item-duration{
       padding: 10px;
+    }
+  }
+  .team__text{
+    font-size: 24px;
+  }
+  .contacts{
+    &__inner{
+      flex-direction: column;
+    }
+    &__inner-left{
+      max-width: 100%;
+    }
+    &__inner-right{
+      max-width: 100%;
+    }
+  }
+
+  .articles{
+    &__wrapper{
+      grid-template-columns: 1fr;
+    }
+    .articles__img{
+      max-width: 100%;
+      width: 100%;
+      img{
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -390,6 +476,7 @@
   }
   .company__content{
     padding: 25px;
+    font-size: 24px;
   }
   .gallery{
     padding: 50px 0;
@@ -407,6 +494,10 @@
     .parent div{
       grid-area: auto;
     }
+  }
+
+  .articles__info-date{
+    font-size: 24px;
   }
 
 }

@@ -217,10 +217,6 @@ nav.breadcrumbs{
     margin-bottom: 25px;
   }
   &__socials-item{
-    background-color: $light-color;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,7 +225,6 @@ nav.breadcrumbs{
       transform: translateY(3px);
     }
     &:hover{
-      border: 1px solid #000000;
       transform: translateY(-2px);
       transition: 0.3s all ease;
     }
