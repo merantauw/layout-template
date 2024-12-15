@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{> head }}
+<body>
+{{> header }}
+<div class="container">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+        <ul class="breadcrumbs-list">
+            <li class="crumb home">
+                <a href="index.html">
+                    <span>Главная</span>
+                </a>
+            </li>
+            <li class="crumb last ">
+                <span>Карта сайта</span>
+            </li>
+        </ul>
+    </nav>
+</div>
+<main class="main">
+    <section class="systempage">
+        <div class="container">
+            <h1 class="title">Карта сайта</h1>
+            <div class="systempage__wrapper">
+                <ul class="systempage__list">
+                    <li class="systempage__item">
+                        <a href="index.html" class="sitemap__link">Главная</a>
+                    </li>
+                    <li class="systempage__item">
+                        <a href="index.html" class="sitemap__link">О компании</a>
+                    </li>
+                    <li class="systempage__item">
+                        <a href="index.html" class="sitemap__link">Каталог</a>
+                    </li>
+                    <li class="systempage__item">
+                        <a href="index.html" class="sitemap__link">Блог</a>
+                        <ul class="systempage__list">
+                            <li class="systempage__item">
+                                <a href="index.html" class="sitemap__link">Подпункт 1</a>
+                            </li>
+                            <li class="systempage__item">
+                                <a href="index.html" class="sitemap__link">Подпункт 2</a>
+                            </li>
+                            <li class="systempage__item">
+                                <a href="index.html" class="sitemap__link">Подпункт 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="systempage__item">
+                        <a href="index.html" class="sitemap__link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+</main>
+{{> footer }}
+{{> scripts }}
+</body>
+</html>

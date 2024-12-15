@@ -12,6 +12,7 @@ module.exports = () => ({
     blog_page: './src/pages/blog_page.js',
     catalog: './src/pages/catalog.js',
     product: './src/pages/product.js',
+    systempage: './src/pages/systempage.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -140,6 +141,13 @@ module.exports = () => ({
       template: './src/pages/product.hbs',
       filename: 'product.html',
       chunks: ['product'],
+      minify: false,
+      inject: 'body',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/systempage.hbs',
+      filename: 'systempage.html',
+      chunks: ['systempage'],
       minify: false,
       inject: 'body',
     }),
