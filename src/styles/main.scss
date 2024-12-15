@@ -96,7 +96,7 @@ input{
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* Убедитесь, что это значение достаточно высокое, чтобы header был над всеми элементами */
+  z-index: 1000;
   transition: transform 0.3s ease;
 
   &-top {
@@ -123,7 +123,6 @@ input{
       }
     }
   }
-
   &.hidden {
     transform: translateY(-300%);
   }
