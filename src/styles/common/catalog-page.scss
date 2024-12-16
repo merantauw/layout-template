@@ -8,6 +8,29 @@
 }
 
 .filters{
+  &__toggle {
+    display: none;
+    padding: 12px 0;
+    font-size: 30px;
+    line-height: 140%;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+
+    &-icon {
+      max-width: 24px;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+
+    &.active {
+      .filters__toggle-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
   &__title{
     padding: 12px 0;
     display: flex;

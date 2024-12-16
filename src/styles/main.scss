@@ -163,13 +163,16 @@ nav.breadcrumbs{
     display: flex;
     margin-top: 50px;
     justify-content: start;
+    flex-wrap: wrap;
+    gap: 25px;
     align-items: center;
     .crumb{
       font-size: 24px;
+      line-height: 140%;
       position: relative;
       &:not(:first-child)::before{
         content: '|';
-        padding: 0 20px;
+        padding: 0 20px 0 0;
       }
       &.last{
         color: #898989;

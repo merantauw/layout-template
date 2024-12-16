@@ -1,13 +1,16 @@
 @import "~styles/common/variables.scss";
 
 .article{
-  padding: 75px 0;
+  padding: 0 0 75px;
   &__content{
     display: grid;
     grid-template-columns: 3fr 1fr;
     font-size: 30px;
     line-height: 140%;
     position: relative;
+    img{
+      margin-bottom: 25px;
+    }
   }
   &__content-body{
     max-width: 97%;

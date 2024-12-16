@@ -5,3 +5,4 @@ import '../styles/common/media.scss';
 
 import '../scripts/header.js';
 import '../scripts/smooth.js';
+import '../scripts/article-section.js';

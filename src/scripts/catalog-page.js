@@ -23,6 +23,30 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function toggleFilters() {
+        const filtersList = document.querySelector('.filters');
+        const filtersToggle = document.querySelector('.filters__toggle');
+
+        if (filtersList && filtersToggle) {
+            if (filtersList.classList.contains('active')) {
+                filtersList.style.maxHeight = null;
+                filtersList.classList.remove('active');
+                filtersToggle.classList.remove('active');
+                filtersToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                filtersList.style.maxHeight = filtersList.scrollHeight + 'px';
+                filtersList.classList.add('active');
+                filtersToggle.classList.add('active');
+                filtersToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+    }
+
+    const filtersToggle = document.querySelector('.filters__toggle');
+    if (filtersToggle) {
+        filtersToggle.addEventListener('click', toggleFilters);
+    }
+
     const observer = new MutationObserver(mutations => {
         mutations.forEach(mutation => {
             if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
@@ -38,4 +62,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Инициализация аккордеона при первой загрузке страницы
     initAccordion();
+
+    // Сворачиваем все элементы по умолчанию на ширине экрана меньше 1024px
+    function collapseAllAccordions() {
+        const filtersList = document.querySelector('.filters');
+        const filtersToggle = document.querySelector('.filters__toggle');
+
+        if (filtersList && filtersToggle) {
+            filtersList.style.maxHeight = null;
+            filtersList.classList.remove('active');
+            filtersToggle.classList.remove('active');
+            filtersToggle.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    if (window.innerWidth < 1024) {
+        collapseAllAccordions();
+    }
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth < 1024) {
+            collapseAllAccordions();
+        }
+    });
 });
