@@ -11,10 +11,12 @@ import '../styles/common/working-stages-section.scss';
 import '../styles/common/reviews-section.scss';
 import '../styles/common/faq-section.scss';
 import '../styles/common/seo-section.scss';
+import '../styles/common/modals.scss';
 import '../styles/common/media.scss';
 
-import '../scripts/goods-section.js';
 import '../scripts/header.js';
+import '../scripts/modals.js';
+import '../scripts/goods-section.js';
 import '../scripts/faq-section.js';
 import '../scripts/seo-section.js';
 import '../scripts/promo-section.js';

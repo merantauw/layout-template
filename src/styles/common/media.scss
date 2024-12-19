@@ -528,6 +528,12 @@
   .container {
     padding: 0 15px;
   }
+  .modal-header{
+    padding: 0 0 25px;
+  }
+  .content-modal .modal-heading{
+    font-size: 24px;
+  }
   .form-section,
   .cta {
     padding: 50px 15px;
@@ -725,9 +731,19 @@
 }
 
 @media (max-width: 420px) {
+  .btn{
+    padding: 15px;
+  }
   .breadcrumbs-list .crumb{
     font-size: 18px;
   }
+  .gallery__title{
+    margin-bottom: 0;
+  }
+  .gallery__inner-top{
+    align-items: center;
+  }
+
   h2 {
     font-size: 20px;
   }

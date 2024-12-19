@@ -176,6 +176,10 @@ nav.breadcrumbs{
       }
       &.last{
         color: #898989;
+        &:hover span{color: #898989;}
+      }
+      &:hover span{
+        color: #b4d0df;
       }
     }
 }
@@ -290,6 +294,20 @@ nav.breadcrumbs{
     color: $light-color;
     transition: 0.3s ease all;
   }
+}
+
+
+.callback__button{
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  bottom: 5%;
+  transition: transform 0.3s ease;
+}
+
+.callback__button:hover{
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 1640px){
