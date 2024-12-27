@@ -94,6 +94,7 @@ module.exports = () => ({
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'assets/styles/[name].css',
+
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/index.hbs',
@@ -171,5 +172,6 @@ module.exports = () => ({
   mode: 'development',
   optimization: {
     minimize: false,
+    minimizer: [],
   },
 });
