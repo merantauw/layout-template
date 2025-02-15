@@ -13,6 +13,9 @@ module.exports = () => ({
     catalog: './src/pages/catalog.js',
     product: './src/pages/product.js',
     systempage: './src/pages/systempage.js',
+    login: './src/pages/login.js',
+    cart: './src/pages/cart.js',
+    checkout: './src/pages/checkout.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -152,7 +155,27 @@ module.exports = () => ({
       minify: false,
       inject: 'body',
     }),
-
+    new HtmlWebpackPlugin({
+      template: './src/pages/login.hbs',
+      filename: 'login.html',
+      chunks: ['login'],
+      minify: false,
+      inject: 'body',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/cart.hbs',
+      filename: 'cart.html',
+      chunks: ['cart'],
+      minify: false,
+      inject: 'body',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/checkout.hbs',
+      filename: 'checkout.html',
+      chunks: ['checkout'],
+      minify: false,
+      inject: 'body',
+    }),
     /* Сюда вставляй копируй конструкцию сверху с названием страницы. Меняй название сразу в трёх строках */
     new CopyWebpackPlugin({
       patterns: [

@@ -9,6 +9,9 @@ body{
   line-height: 140%;
   overflow-x: hidden;
 }
+ul{
+  padding-left: 0;
+}
 h1,h2,h3{
   font-family: Furore, sans-serif;
   line-height: 140%;
@@ -44,8 +47,12 @@ h2{
 .btn,
 input{
   transition: 0.3s all ease;
-  padding: 15px 35px;
   font-size: 22px;
+}
+
+button.header-btn{
+  color: #000000;
+  font-size: 18px;
 }
 
 .btn{
@@ -53,7 +60,7 @@ input{
 }
 
 .btn:hover{
-  box-shadow: $shadow;
+  //box-shadow: $shadow;
   transform: translateY(-2px);
   transition: 0.3s all ease;
 }
@@ -90,82 +97,145 @@ input{
   border: 1px solid #000;
 }
 
-.header {
-  padding-top: 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transition: transform 0.3s ease;
+// header styles start
 
-  &-top {
-    display: flex;
-    margin-bottom: 15px;
-    justify-content: space-between;
-    align-items: center;
+.header-top-phone a {
+  text-decoration: none;
+}
 
-    .header-phone {
-      font-size: 32px;
-    }
+.header-top-phone a:hover {
+  text-decoration: underline;
+}
 
-    .mobile-menu-button {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
+ul.social-icons {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  gap: 10px;
+}
 
-      .burger-line {
-        width: 25px;
-        height: 3px;
-        background-color: #000;
-        margin: 3px 0;
-        transition: all 0.3s ease;
-      }
-    }
-  }
-  &.hidden {
-    transform: translateY(-300%);
-  }
+ul.social-icons a {
+  background-color: $dark-gray;
+  color: $light-color;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  float: left;
+  text-align: center;
+  line-height: 30px;
+  transition: all 0.3s;
+}
 
-  &-bottom {
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
-    background-color: $blue-color;
-    border-radius: 20px;
+ul.social-icons a:hover {
+  background-color: transparent;
+  color: $dark-gray;
+}
 
-    nav ul {
-      display: flex;
-      font-family: Inter-Regular, sans-serif;
-      font-size: 32px;
-      justify-content: space-between;
-      align-items: center;
-      gap: 72px;
-    }
+.header-top .btn {
+  background-color: #fff;
+}
 
-    .header-search input {
-      padding: 6px 15px;
-      border-bottom: 1px solid #000;
-      text-align: right;
-    }
+.header-logo {
+  text-decoration: none;
+  text-transform: uppercase;
+  //color: var(--accent-color);
+  transition: all 0.3s;
+}
 
-    .header-search input::placeholder {
-      color: #000000;
-      font-size: 20px;
-    }
+/*.header-logo:hover {
+  color: var(--contrast-color);
+}*/
+
+.cart-buttons .btn {
+  color: $blue-color;
+  transition: all 0.3s;
+}
+
+.section-title{
+  font-weight: 700;
+  font-family: Furore, sans-serif;
+}
+.offcanvasCart-table .product-img-td{
+  width: 70px;
+  text-align: center;
+}
+
+.offcanvasCart-table a{
+  text-decoration: none;
+  display: block;
+}
+.offcanvasCart-table img{
+  max-width: 50px;
+}
+
+.offcanvasCart-table a:hover{
+  text-decoration: underline;
+}
+
+.header-bottom {
+  border-top: 2px solid var(--accent-color);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+}
+
+.header-bottom .navbar,
+.header-bottom .navbar .dropdown-menu {
+  background-color: $blue-color !important;
+}
+
+.header-bottom .nav-item:first-child .nav-link {
+  padding-left: 0;
+}
+
+.header-bottom .navbar .nav-link {
+  color: #000000;
+  transition: all .3s;
+  letter-spacing: 0.1rem;
+}
+
+.header-bottom .navbar .nav-link:hover {
+  color: $gray-color;
+}
+
+.header-bottom .navbar .nav-link.active {
+  color: $dark-gray;
+}
+
+.header-bottom .navbar .dropdown-menu {
+  margin-top: 7px;
+}
+
+.headernav-scroll.header-bottom .navbar .offcanvas:not(.show) .nav-link {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+// header styles end
+
+.btn-warning{
+  background-color: #b4d0df !important;
+  border-color: #b4d0df !important;
+}
+
+.btn-outline-warning{
+  color: #b4d0df !important;
+  border-color: #b4d0df !important;
+  &:hover{
+    color: #000000 !important;
+    background-color: #b4d0df !important;
   }
 }
 
 nav.breadcrumbs{
-  padding-top: 170px;
+  padding-top: 0;
 }
-.breadcrumbs-list{
+ul.breadcrumbs-list{
     display: flex;
     margin-top: 50px;
     justify-content: start;
     flex-wrap: wrap;
     gap: 25px;
     align-items: center;
+    padding-left: 0;
     .crumb{
       font-size: 24px;
       line-height: 140%;
@@ -315,7 +385,6 @@ nav.breadcrumbs{
 @media (max-width: 1640px){
   .header{
     &-bottom{
-      padding: 25px;
       nav ul{
         gap: 40px;
       }

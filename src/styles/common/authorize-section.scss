@@ -1,0 +1,14 @@
+.authorize-section{
+  padding: 0 0 75px;
+
+  .restore-pass-btn{
+    font-size: 14px;
+    color: #12121270;
+    border-bottom: 1px solid;
+    transition: color .3s;
+    &:hover{
+      color: #1c1c1c;
+      transition: color .3s;
+    }
+  }
+}

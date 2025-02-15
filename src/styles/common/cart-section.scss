@@ -1,0 +1,19 @@
+.cart-section{
+  padding: 0 0 50px;
+
+  .cart-content table img{
+    max-width: 75px;
+  }
+
+  .cart-content table th{
+    text-align: center;
+  }
+
+  .cart-content table td{
+    padding: 1rem;
+  }
+
+  .cart-qty{
+    width: 70px;
+  }
+}
