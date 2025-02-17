@@ -23,7 +23,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-    max-width: 450px;
+    max-width: 350px;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 0 0 auto;
@@ -56,9 +56,6 @@
       width: 100%;
       padding: 0 30px;
 
-      button {
-        padding: 10px 30px;
-      }
     }
   }
   &__btn{
