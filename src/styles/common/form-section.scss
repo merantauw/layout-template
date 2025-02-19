@@ -1,6 +1,7 @@
 @import "~styles/common/variables.scss";
 
 .form-section{
+  background-color: $light-color;
   padding: 75px 0;
   &__container{
     padding: 50px 35px;
@@ -27,10 +28,11 @@ form.form{
     width: 100%;
   }
   input{
-    padding: 25px;
+    padding: 15px;
     background-color: $light-color;
-    margin-bottom: 30px;
-    border-radius: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 20px;
     &:focus{
       border: 1px solid #000000;
     }

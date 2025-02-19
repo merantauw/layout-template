@@ -16,7 +16,7 @@
   }
   &__item {
     background-color: #ffffff;
-    border-radius: 35px;
+    border-radius: 20px;
     padding: 15px 15px 30px;
     display: flex !important;
     flex-direction: column;
@@ -53,6 +53,7 @@
     &-buttons {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       width: 100%;
       padding: 0 30px;
 
@@ -62,6 +63,31 @@
     text-align: center;
     margin-top: 20px;
   }
+}
+
+.product-links a.btn{
+  font-size: 16px;
+}
+
+.product-price {
+  font-size: 18px;
+  color: $dark-gray;
+  font-weight: 600;
+}
+
+.product-price small {
+  color: $gray-comment;
+  font-weight: 400;
+  text-decoration: line-through;
+  font-size: 0.8rem;
+}
+
+.btn.btn-outline-danger.add-to-liked{
+  border-color: #6c757d;
+}
+
+.btn.btn-outline-danger.add-to-liked:hover{
+  border-color: #dc3545;
 }
 
 .swiper-container {

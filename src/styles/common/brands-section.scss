@@ -1,6 +1,7 @@
 @import "~styles/common/variables.scss";
 
 .brands {
+  background-color: $light-color;
   padding: 75px 0;
 
   &__list {
@@ -11,7 +12,7 @@
 
   &__item {
     box-shadow: $shadow;
-    border-radius: 30px;
+    border-radius: 15px;
     display: flex;
     justify-content: space-between;
     transition: 0.3s all ease;
