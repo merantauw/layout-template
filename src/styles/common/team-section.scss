@@ -7,9 +7,8 @@
     align-items: start;
     gap: 100px;
   }
-  &__left,
-  &__right{
-    max-width: 50%;
+  &__left{
+    max-width: 80%;
     width: 100%;
   }
   &__right img{
@@ -17,7 +16,7 @@
   }
   &__text,
   &__desc{
-    font-size: 30px;
+    font-size: 20px;
     line-height: 140%;
   }
   &__text{

@@ -32,14 +32,14 @@
     }
   }
   &__title{
-    padding: 12px 0;
+    padding: 0;
     display: flex;
     justify-content: space-between;
-    font-size: 30px;
+    font-size: 18px;
     line-height: 140%;
     margin-bottom: 10px;
     &-icon{
-      max-width: 24px;
+      max-width: 16px;
       width: 100%;
       transition: all 0.3s ease;
     }
@@ -67,7 +67,7 @@
   }
   &__option{
     display: flex;
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 20px;
     input{
       width: 20px;
@@ -81,9 +81,10 @@
 }
 
 aside{
+  align-self: start;
   padding: 25px;
   background-color: $light-color;
-  border-radius: 35px;
+  border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   &-inner{
     display: flex;
@@ -104,24 +105,32 @@ aside{
     gap: 30px;
 
   }
-  &__item{
+  &__item {
     background-color: #ffffff;
-    border-radius: 35px;
+    border-radius: 20px;
     padding: 15px 15px 30px;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-    max-width: 450px;
+    max-width: 350px;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 0 0 auto;
     overflow: hidden;
-    &-img{
+    &:hover{
+      box-shadow: $shadow;
+    }
+    &-img {
       border-radius: 30px;
     }
-    &-stats{
+    &-title a{
+      &:hover{
+        color: $blue-color !important;
+      }
+    }
+    &-stats {
       display: flex;
       flex-direction: column;
       padding: 0 30px;
@@ -130,25 +139,49 @@ aside{
       font-family: Inter-Medium, sans-serif;
       font-size: 15px;
     }
-    &-state{
+    &-state {
       display: flex;
       justify-content: space-between;
-      .dashed{
+      .dashed {
         width: 75%;
         height: 18px;
         border-bottom: 1px dashed $gray-comment;
       }
     }
-    &-buttons{
+    &-buttons {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
       width: 100%;
       padding: 0 30px;
-      button{
-        padding: 10px 30px;
-      }
+
     }
   }
+}
+
+.product-links a.btn{
+  font-size: 16px;
+}
+
+.product-price {
+  font-size: 18px;
+  color: $dark-gray;
+  font-weight: 600;
+}
+
+.product-price small {
+  color: $gray-comment;
+  font-weight: 400;
+  text-decoration: line-through;
+  font-size: 0.8rem;
+}
+
+.btn.btn-outline-danger.add-to-liked{
+  border-color: #6c757d;
+}
+
+.btn.btn-outline-danger.add-to-liked:hover{
+  border-color: #dc3545;
 }
 
 .pagination__wrapper{
@@ -158,7 +191,7 @@ aside{
   gap: 10px;
   margin-top: 75px;
   font-family: Inter-Regular, sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 140%;
   .pagination__item {
     display: flex;

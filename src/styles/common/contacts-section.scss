@@ -1,7 +1,7 @@
 @import "~styles/common/variables.scss";
 
 .contacts{
-  padding: 0 0 50px;
+  padding: 0 0 75px;
   &__inner{
     display: flex;
     justify-content: space-between;
@@ -51,19 +51,20 @@
 
   &__label,
   &__value{
-    font-size: 30px;
+    font-size: 20px;
     line-height: 140%;
     margin-bottom: 15px;
   }
   &__value{
     display: inline-block;
     font-family: Inter-Medium, sans-serif;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 }
 #map{
   width: 100%;
-  height: 777px;
+  overflow: hidden;
+  height: 540px;
   border-radius: 20px;
   & iframe{
     border-radius: 20px;

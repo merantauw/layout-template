@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const seoView = document.getElementById('seoView');
     const hideSeoBtn = document.getElementById('hideSeoBtn');
     const seoDescription = document.querySelector('.seo-description');
-    const maxWords = 35;
+    const maxWords = 43;
 
     function truncateText(text, maxWords) {
         const words = text.split(' ');

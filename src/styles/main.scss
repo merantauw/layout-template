@@ -22,7 +22,7 @@ h1.title{
 }
 
 h1{
-  font-size: 64px;
+  font-size: 52px;
 }
 p{
   line-height: 140%;
@@ -144,10 +144,12 @@ ul.social-icons a:hover {
   transition: all 0.3s;
 }
 
-/*.header-logo:hover {
-  color: var(--contrast-color);
-}*/
-
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .cart-buttons .btn {
   color: $blue-color;
   transition: all 0.3s;
@@ -236,14 +238,14 @@ nav.breadcrumbs{
 }
 ul.breadcrumbs-list{
     display: flex;
-    margin-top: 50px;
+    margin-top: 35px;
     justify-content: start;
     flex-wrap: wrap;
     gap: 25px;
     align-items: center;
     padding-left: 0;
     .crumb{
-      font-size: 24px;
+      font-size: 18px;
       line-height: 140%;
       position: relative;
       &:not(:first-child)::before{
