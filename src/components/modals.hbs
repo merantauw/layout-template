@@ -1,4 +1,4 @@
-<div id="modal" class="modal">
+<!--<div id="modal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
             <span class="modal-close">Закрыть &times;</span>
@@ -29,6 +29,64 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="modal fade" id="reviewModal" tabindex="-1"
+     aria-labelledby="reviewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title fs-5 product__tech-title" id="reviewModalLabel">Написать отзыв</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+
+            <form action="">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Ваше имя</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Алексей Иванов">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput2" class="form-label">Ваш email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="example123@yandex.ru">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Оставьте отзыв о товаре</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <p>Оцените товар:</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rate" id="rate1" value="1" required>
+                            <label class="form-check-label" for="rate1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rate" id="rate2" value="2" required>
+                            <label class="form-check-label" for="rate2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rate" id="rate3" value="3" required>
+                            <label class="form-check-label" for="rate3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rate" id="rate4" value="4" required>
+                            <label class="form-check-label" for="rate3">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rate" id="rate5" value="5" required>
+                            <label class="form-check-label" for="rate3">5</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-warning">Отправить отзыв</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

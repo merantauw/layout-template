@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   {{> head }}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <body>
     {{> header }}
     <main class="main">
@@ -20,5 +21,26 @@
     {{> footer }}
     {{> modals }}
     {{> scripts }}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.swiper-container', {
+                direction: 'horizontal',
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                freeMode: false,
+                autoplay: {
+                    delay: 2700,
+                    disableOnInteraction: true,
+                },
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    hide: true,
+                },
+                speed: 1700,
+                freeModeMomentum: true,
+                freeModeMomentumBounce: true,
+            });
+        });
+    </script>
   </body>
 </html>

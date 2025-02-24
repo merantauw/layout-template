@@ -26,13 +26,18 @@ form.form{
   max-width: 600px;
   input, button{
     width: 100%;
+    font-size: 18px;
+  }
+  button.btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   input{
     padding: 15px;
     background-color: $light-color;
     margin-bottom: 20px;
-    border-radius: 10px;
-    font-size: 20px;
+    border-radius: 5px;
+
     &:focus{
       border: 1px solid #000000;
     }

@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
             el: '.swiper-scrollbar',
             hide: true,
         },
-        mousewheel: {
-            releaseOnEdges: true,
-            sensitivity: 1,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
         },
         speed: 1700,
         freeModeMomentum: true,

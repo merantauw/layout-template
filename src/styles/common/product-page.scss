@@ -1,31 +1,33 @@
 .product{
-  padding: 75px 0;
+  padding: 0 0 75px;
   &__wrapper{
     display: flex;
     gap: 30px;
+    margin-bottom: 50px;
   }
   &__slider-inner{
     display: grid;
     grid-template-columns: 92px 1fr;
     gap: 20px;
-    height: 400px;
+    height: 390px;
   }
-  &__tech-title{
+  &__tech-title,
+  &__price-title{
     font-size: 20px;
     margin-bottom: 25px;
     font-family: Onest-EB, sans-serif;
   }
   &__info{
-    max-width: 50%;
+    flex: 1;
   }
   &__stats{
     margin-bottom: 50px;
     font-family: Onest-Regular, sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 140%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 8px;
     width: 100%;
     color: #000000;
   }
@@ -36,15 +38,53 @@
     span:first-child{
       max-width: 600px;
       flex-shrink: 0;
+      color: #797676;
     }
     span:last-child{
-      max-width: 300px;
       flex-shrink: 0;
       align-self: center;
     }
     .dashed{
       width: 100%;
-      border-bottom: 1px dashed #000000;
+      border-bottom: 1px dashed #797676;
+    }
+  }
+  &__price{
+    height: fit-content;
+  }
+  &__price-inner,
+  &__price-delivery{
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+  }
+  &__price-inner{
+    margin-bottom: 15px;
+  }
+  &__price-value{
+    width: 100%;
+    font-size: 36px;
+    font-weight: 700;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #e0dddd78;
+    span{
+      font-size: 12px;
+      font-weight: 400;
+      color: rgb(129 124 124);
+    }
+  }
+  &__price-delivery{
+    padding: 20px;
+    p:first-child{
+      margin-bottom: 15px;
+    }
+    p span{
+      color: rgb(129, 124, 124);
     }
   }
   &__buttons{
@@ -53,13 +93,33 @@
     flex-wrap: wrap;
     gap: 0;
     width: 100%;
+    .btn{
+      font-size: 16px;
+      color: #6F6F6F;
+      &:hover{
+        border: 1px solid;
+      }
+    }
     button{
-      padding: 20px 30px;
+      padding: 10px 0;
       max-width: 50%;
       width: 100%;
+      font-size: 18px;
     }
-    .btn.one-click-buy{
-      max-width: 100%;
+  }
+  .btn.one-click-buy{
+    max-width: 100%;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    &:hover{
+      transform: none;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-bottom: 1px solid #198754;
     }
   }
   &__description{
@@ -72,6 +132,12 @@
 
   &__price{
     max-width: 375px;
+  }
+
+  .swiper-slide img,
+  .swiper-slide,
+  .swiper-slide.active{
+    border-radius: 10px !important;
   }
 }
 
@@ -109,13 +175,39 @@
 
 .tab-content {
   padding: 20px;
-  font-size: 24px;
+  font-size: 14px;
   line-height: 140%;
   background-color: #ffffff;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   p{
     margin-bottom: 25px;
+    font-size: 16px;
+  }
+}
+.product-rating .active{
+  color: #FFD43B;
+}
+.tab-pane.fade button.btn{
+  font-size: 16px;
+}
+.product-rating .count-reviews{
+  margin-left: 10px;
+}
+.product-review-header{
+  display: flex;
+  justify-content: space-between;
+}
+.product-review-header .review-date{
+  color: #6F6F6F;
+}
+
+.nav-tabs .nav-link{
+  font-size: 20px;
+  color: #000000;
+  &.active{
+    border: none;
+    border-bottom: 2px solid #fff;
   }
 }
 
