@@ -15,7 +15,11 @@
   &-list__item{
     padding: 25px 25px 40px;
     background-color: $light-color;
-    box-shadow: $shadow;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    &:hover{
+      box-shadow: $shadow;
+    }
   }
   &-item__top{
     display: flex;

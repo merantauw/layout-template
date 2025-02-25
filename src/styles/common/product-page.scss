@@ -1,5 +1,5 @@
 .product{
-  padding: 0 0 75px;
+  padding: 0 0 50px;
   &__wrapper{
     display: flex;
     gap: 30px;
@@ -217,4 +217,47 @@
 
 .tab.active {
   display: block;
+}
+
+.productUtp {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 10px;
+}
+
+.utpCard {
+  width: 100%;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 16px 18px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  row-gap: 2px;
+  column-gap: 12px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.utpCard_image {
+  align-self: center;
+  grid-row: 1 / 3;
+  width: 44px;
+  height: 44px;
+}
+
+.utpCard_title {
+  color: #333237;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 145%;
+}
+
+.utpCard_description {
+  color: #a1a1a1;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 145%;
 }

@@ -1,203 +1,57 @@
 @import "~styles/common/variables.scss";
 
-.catalog__container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 30px;
-  padding-bottom: 75px;
-}
-
-.filters{
-  &__toggle {
-    display: none;
-    padding: 12px 0;
-    font-size: 30px;
-    line-height: 140%;
-    cursor: pointer;
-    background: none;
-    border: none;
+.catalog{
+  padding: 0 0 50px;
+  &__container{
+    display: flex;
+    gap: 20px;
+  }
+  &__left{
+    max-width: 70%;
     width: 100%;
-    text-align: left;
-
-    &-icon {
-      max-width: 24px;
-      width: 100%;
-      transition: all 0.3s ease;
-    }
-
-    &.active {
-      .filters__toggle-icon {
-        transform: rotate(180deg);
-      }
-    }
+    background-color: #fff;
+    border-radius: 10px;
   }
-  &__title{
-    padding: 0;
+  &__list-categories{
     display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    line-height: 140%;
-    margin-bottom: 10px;
-    &-icon{
-      max-width: 16px;
-      width: 100%;
-      transition: all 0.3s ease;
-    }
-    &.active{
-      .filters__title-icon{
-        transform: rotate(180deg);
-      }
-    }
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;
+    border: 1px solid #ececec;
   }
-  &__list {
-    opacity: 1;
-    max-height: 0;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    .active {
-      display: block;
-    }
-  }
-  &__item{
-    margin-bottom: 15px;
-    cursor: pointer;
-  }
-  &__option{
-    display: flex;
-    font-size: 16px;
-    margin-bottom: 20px;
-    input{
-      width: 20px;
-    }
-    label{
-      display: inline-block;
-      padding-left: 10px;
-      width: 100%;
-    }
-  }
-}
-
-aside{
-  align-self: start;
-  padding: 25px;
-  background-color: $light-color;
-  border-radius: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  &-inner{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
-.goods{
-  &-inner{
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-  }
-  &__list{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-
-  }
-  &__item {
-    background-color: #ffffff;
-    border-radius: 20px;
-    padding: 15px 15px 30px;
-    display: flex !important;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    max-width: 350px;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 0 0 auto;
-    overflow: hidden;
+  &__item-category{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 6px 12px;
+    height: 110px;
+    width: calc((100% - 85px)/4);
+    border-radius: 10px;
+    background-position: right 180% !important;
+    transition: background-position .3s;
     &:hover{
+      transition: background-position .3s;
+      background-position: right 150% !important;
       box-shadow: $shadow;
     }
-    &-img {
-      border-radius: 30px;
-    }
-    &-title a{
-      &:hover{
-        color: $blue-color !important;
-      }
-    }
-    &-stats {
-      display: flex;
-      flex-direction: column;
-      padding: 0 30px;
-      width: 100%;
-      color: $gray-comment;
-      font-family: Inter-Medium, sans-serif;
-      font-size: 15px;
-    }
-    &-state {
-      display: flex;
-      justify-content: space-between;
-      .dashed {
-        width: 75%;
-        height: 18px;
-        border-bottom: 1px dashed $gray-comment;
-      }
-    }
-    &-buttons {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      padding: 0 30px;
-
-    }
   }
-}
-
-.product-links a.btn{
-  font-size: 16px;
-}
-
-.product-price {
-  font-size: 18px;
-  color: $dark-gray;
-  font-weight: 600;
-}
-
-.product-price small {
-  color: $gray-comment;
-  font-weight: 400;
-  text-decoration: line-through;
-  font-size: 0.8rem;
-}
-
-.btn.btn-outline-danger.add-to-liked{
-  border-color: #6c757d;
-}
-
-.btn.btn-outline-danger.add-to-liked:hover{
-  border-color: #dc3545;
-}
-
-.pagination__wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 75px;
-  font-family: Inter-Regular, sans-serif;
-  font-size: 24px;
-  line-height: 140%;
-  .pagination__item {
-    display: flex;
+  &__item-link{
+    display: block;
+    height: 100%;
+    width: 100%;
   }
-  .project_content_footerblock_footer_pages{
-    display: flex;
-    gap: 25px;
+
+  &__list-brands{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0 20px;
+    gap: 5px;
+    font-size: 14px;
+  }
+  &__item-brand:last-child{
+    text-decoration: underline;
+  }
+  &__item-brand:hover a{
+      color: $gray;
   }
 }
