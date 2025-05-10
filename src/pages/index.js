@@ -15,8 +15,8 @@ import '../styles/common/modals.scss';
 import '../styles/common/media.scss';
 
 import '../scripts/header.js';
-import '../scripts/modals.js';
 import '../scripts/faq-section.js';
+import '../scripts/modals.js';
 import '../scripts/seo-section.js';
 import '../scripts/promo-section.js';
 import '../scripts/smooth.js';

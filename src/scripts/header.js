@@ -1,32 +1,44 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('.header');
-    const mobileMenuButton = document.getElementById('mobileMenuButton');
-    const headerBottom = document.querySelector('.header-bottom');
-    const headerMenu = document.querySelector('.header-menu');
-    const body = document.body;
+document.addEventListener('DOMContentLoaded', function () {
+    const burger = document.getElementById('burger');
 
-    if (header) {
-        let lastScrollTop = 0;
+    document.querySelector('[data-bs-target="#menuModal"]').addEventListener('show.bs.modal', function () {
+        burger.classList.add('active');
+    });
 
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    document.querySelector('[data-bs-target="#menuModal"]').addEventListener('hide.bs.modal', function () {
+        burger.classList.remove('active');
+    });
+});
 
-            if (scrollTop > lastScrollTop) {
-                header.classList.add('hidden');
-            } else {
-                header.classList.remove('hidden');
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Для IE и Opera
-        }, false);
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector("header.header--container");
+    const headerWrapper = document.querySelector("div.header--wrapper");
+    const placeholder = document.getElementById("header-placeholder");
+
+    if (!header) return;
+
+    function toggleHeaderClass() {
+        if (window.scrollY > 117) {
+            header.classList.add("active");
+            headerWrapper.classList.add("active");
+            if (placeholder) placeholder.style.display = "block";
+        } else {
+            header.classList.remove("active");
+            headerWrapper.classList.remove("active");
+            if (placeholder) placeholder.style.display = "none";
+        }
     }
 
-    if (mobileMenuButton && headerBottom && headerMenu) {
-        mobileMenuButton.addEventListener('click', function() {
-            headerBottom.classList.toggle('expanded');
-            headerMenu.classList.toggle('expanded');
-            header.classList.toggle('expanded');
-            body.classList.toggle('body-no-scroll');
-            mobileMenuButton.classList.toggle('expanded'); // Добавляем класс expanded к кнопке бургер-меню
-        });
-    }
+    toggleHeaderClass();
+
+    let ticking = false;
+    window.addEventListener("scroll", () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                toggleHeaderClass();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
 });

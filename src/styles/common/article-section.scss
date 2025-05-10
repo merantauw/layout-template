@@ -104,6 +104,9 @@
     max-width: 50%;
     padding: 10px 25px;
     text-align: center;
-    color: #ffffff !important;
+    border: 1px solid $gray-comment;
+    &:hover{
+      border-color: $gray;
+    }
   }
 }

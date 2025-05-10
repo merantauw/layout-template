@@ -3,16 +3,18 @@
   background-color: $light-color;
   padding: 75px 0;
   i{
-    font-size: 60px;
+    font-size: 40px;
     color: $blue-color;
     margin-bottom: 15px;
   }
   &-list{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 50px;
   }
   &-list__item{
+    width: calc(25% - 50px);
     padding: 25px 25px 40px;
     background-color: $light-color;
     border: 1px solid #ececec;
@@ -29,7 +31,7 @@
     margin-bottom: 10px;
   }
   &-item__number{
-    font-size: 54px;
+    font-size: 40px;
     font-family: Furore, sans-serif;
     color: $blue-color;
     margin-bottom: 0;

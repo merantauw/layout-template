@@ -17,7 +17,7 @@
     }
 
     &__btn {
-      padding: 20px 35px;
+      padding: 0 35px;
     }
   }
 
@@ -61,12 +61,13 @@
 
 @media (max-width: 1290px) {
   .advantages {
-    &-item__number {
-      font-size: 60px;
+
+    &-list {
+      gap: 25px;
     }
 
-    &-item__bottom {
-      font-size: 36px;
+    &-list__item {
+      width: calc(25% - 25px);
     }
   }
 
@@ -79,23 +80,24 @@
     }
   }
 
-  .catalog__container{
-      grid-template-columns: 1fr 2fr;
+  .catalog__container {
+    grid-template-columns: 1fr 2fr;
   }
-  .goods__list{
+  .goods__list {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .product{
-    &__wrapper{
+  .product {
+    &__wrapper {
       flex-direction: column-reverse;
       gap: 75px;
     }
-    &__info{
+
+    &__info {
       max-width: 100%;
     }
   }
-  .gallery{
+  .gallery {
     width: 50%;
     margin: 0 auto;
   }
@@ -114,12 +116,8 @@
   }
 
   .faq {
-    &__header p {
-      font-size: 32px;
-    }
-
     &__content p {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 
@@ -250,6 +248,10 @@
     margin-bottom: 25px;
   }
 
+  .faq__header p {
+    font-size: 24px;
+  }
+
   .reviews {
     &__list {
       grid-template-columns: repeat(2, 1fr);
@@ -285,59 +287,62 @@
     &__content-body {
       border-right: none;
     }
-    &__interestings-list{
+
+    &__interestings-list {
       flex-direction: row;
     }
-    &__interestings-item{
+
+    &__interestings-item {
       font-size: 24px;
     }
   }
 
-  .catalog__container{
+  .catalog__container {
     grid-template-columns: 1fr;
   }
 
-  aside{
+  aside {
     border-radius: 20px;
     padding: 15px;
   }
-  /*.goods{
-    padding: 0;
-  }*/
-  .filters{
+
+  .filters {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+
     &__toggle {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    &__option{
+
+    &__option {
       padding: 10px 0;
       font-size: 24px;
     }
-    &.active{
+
+    &.active {
       display: block;
       max-height: 1000px;
     }
   }
 
-  .gallery{
+  .gallery {
     padding: 0;
     width: 100%;
     grid-column-gap: 30px;
     grid-row-gap: 10px;
   }
 
-  .tab-buttons{
+  .tab-buttons {
     overflow-x: auto;
     white-space: nowrap;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-  .tab-button{
+  .tab-button {
     padding: 14px 20px;
   }
 
@@ -347,6 +352,11 @@
 }
 
 @media (max-width: 960px) {
+  .advantages {
+    &-list__item {
+      width: calc(50% - 25px);
+    }
+  }
   .cta {
     &-inner {
       height: 100%;
@@ -399,13 +409,6 @@
     }
   }
 
-  .faq {
-    &__header {
-      p {
-        font-size: 28px;
-      }
-    }
-  }
   .footer__logo a img {
     max-width: 40%;
   }
@@ -486,40 +489,48 @@
     }
   }
 
-  .article{
-    &__interestings-list{
+  .faq__item{
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .article {
+    &__interestings-list {
       flex-direction: column;
     }
-    &__interestings-link{
+
+    &__interestings-link {
       max-width: 100%;
       width: 100%;
-      img{
+
+      img {
         width: 100%;
         object-fit: cover;
       }
     }
   }
 
-  .filters{
-    &__title{
+  .filters {
+    &__title {
       margin-bottom: 5px;
       font-size: 24px;
     }
-    &__item{
+
+    &__item {
       margin-bottom: 0;
     }
   }
 
-  .goods{
+  .goods {
     padding: 25px 0;
   }
 
-  .pagination__wrapper{
+  .pagination__wrapper {
     margin-top: 50px;
   }
 
   .product__stats,
-  .product__description{
+  .product__description {
     font-size: 24px;
   }
 }
@@ -528,15 +539,24 @@
   .container {
     padding: 0 15px;
   }
-  .modal-header{
-    padding: 0 0 25px;
+  .modal-header {
+    padding: 16px;
   }
-  .content-modal .modal-heading{
+  .content-modal .modal-heading {
     font-size: 24px;
   }
   .form-section,
   .cta {
     padding: 50px 15px;
+  }
+  .cta{
+    &__title{
+      font-size: 28px;
+      padding: 0;
+    }
+    &-inner{
+      padding: 100px 0;
+    }
   }
   h2 {
     font-size: 28px;
@@ -551,7 +571,11 @@
 
   .advantages {
     &-list {
-      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    &-list__item {
+      width: calc(100% - 20px);
     }
 
     &-item__number {
@@ -579,9 +603,6 @@
     }
   }
 
-  .cta-inner {
-    padding: 100px 20px;
-  }
   .brands {
     &__list {
       grid-template-columns: repeat(2, 1fr);
@@ -692,7 +713,7 @@
     }
   }
 
-  .company__gallery{
+  .company__gallery {
     .div1,
     .div2,
     .div3,
@@ -702,7 +723,7 @@
     }
   }
 
-  .catalog__gallery{
+  .catalog__gallery {
     padding: 0;
   }
 
@@ -710,37 +731,37 @@
     font-size: 24px;
   }
 
-  .product{
+  .product {
     padding: 50px 0;
   }
-  .product__wrapper{
+  .product__wrapper {
     gap: 50px;
   }
 
-  .product__buttons .btn--square-white{
+  .product__buttons .btn--square-white {
     max-width: 100%;
     width: 100%;
     font-size: 18px;
   }
-  .product__buttons{
+  .product__buttons {
     gap: 30px;
   }
-  .product__buttons button{
+  .product__buttons button {
     font-size: 18px;
   }
 }
 
 @media (max-width: 420px) {
-  .btn{
+  .btn {
     padding: 15px;
   }
-  .breadcrumbs-list .crumb{
+  .breadcrumbs-list .crumb {
     font-size: 18px;
   }
-  .gallery__title{
+  .gallery__title {
     margin-bottom: 0;
   }
-  .gallery__inner-top{
+  .gallery__inner-top {
     align-items: center;
   }
 
@@ -766,34 +787,34 @@
     }
   }
 
-  .aside{
+  .aside {
     padding: 15px;
   }
-  .filters__toggle{
+  .filters__toggle {
     font-size: 24px;
     padding: 0;
   }
-  .goods{
+  .goods {
     padding-bottom: 50px;
   }
-  .goods__list{
+  .goods__list {
     grid-template-columns: 1fr;
   }
-  .goods__item{
+  .goods__item {
     margin: 0 auto;
   }
 
-  .product__stats, .product__description{
+  .product__stats, .product__description {
     font-size: 18px;
   }
-  .product__state span:first-child{
+  .product__state span:first-child {
     max-width: 225px;
   }
-  .tabs{
+  .tabs {
     padding: 25px 0;
   }
   .tab-button,
-  .tab-content{
+  .tab-content {
     font-size: 18px;
   }
 

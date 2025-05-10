@@ -29,12 +29,14 @@
     &:hover{
       background-color: #5251510d;
       transition: background-color .3s;
+      border: 1px solid $gray-comment;
     }
     p {
       margin: 0;
       font-size: 24px;
     }
     &.active {
+      border: 1px solid $gray;
       background-color: #e0e0e0;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -64,6 +66,8 @@
       transform: rotate(-180deg);
     }
     .faq__content {
+      border: 1px solid $gray;
+      border-top: none;
       background-color: #ffffff;
       padding: 0 15px;
       transition: 0.3s all ease;

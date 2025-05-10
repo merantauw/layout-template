@@ -30,11 +30,18 @@
     z-index: 15;
     }
   &__title{
-    font-size: 54px;
+    font-size: 50px;
     padding: 0 20px;
     text-align: center;
     max-width: 800px;
     line-height: 180%;
     color: $light-color;
+  }
+  &__btn{
+    border: 1px solid $gray;
+    border-radius: 14px;
+    &:hover{
+      border-color: $dark-gray;
+    }
   }
 }
