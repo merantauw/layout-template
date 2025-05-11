@@ -18,10 +18,10 @@
     flex-wrap: wrap;
     gap: 25px;
     padding: 20px;
-    border: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
   }
   &__item-category{
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 150%;
     padding: 6px 12px;
@@ -46,13 +46,14 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     padding: 0 20px;
-    gap: 5px;
-    font-size: 14px;
+    gap: 10px;
+    font-size: 20px;
   }
   &__item-brand:last-child{
     text-decoration: underline;
   }
   &__item-brand:hover a{
-      color: $gray;
+    color: $gray;
+    text-decoration: underline;
   }
 }
