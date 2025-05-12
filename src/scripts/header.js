@@ -42,3 +42,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPageUrl = window.location.href;
+
+    const menuItems = document.querySelectorAll('a.btn.btn-outline-light');
+
+    menuItems.forEach(link => {
+        if (link.href) {
+            const linkHref = new URL(link.href).pathname;
+            const currentPath = new URL(currentPageUrl).pathname;
+
+            if (currentPath.endsWith(linkHref)) {
+                link.classList.add("active");
+            }
+        }
+    });
+});

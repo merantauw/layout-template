@@ -6,6 +6,7 @@ import '../styles/common/modals.scss';
 import '../styles/common/media.scss';
 
 import '../scripts/header.js';
+import '../scripts/page_up_button.js';
 import '../scripts/category-page.js';
 import '../scripts/seo-section.js';
 import '../scripts/modals.js';

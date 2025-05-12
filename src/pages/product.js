@@ -11,6 +11,7 @@ import '../styles/common/modals.scss';
 import '../styles/common/media.scss';
 
 import '../scripts/header.js';
+import '../scripts/page_up_button.js';
 import '../scripts/product-page.js';
 import '../scripts/goods-section.js';
 import '../scripts/faq-section.js';

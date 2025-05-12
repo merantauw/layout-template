@@ -6,6 +6,13 @@
     align-items: start;
   }
 
+  &__btn{
+    border: 1px solid #898989;
+    &:hover{
+      border-color: #393838;
+    }
+  }
+
   .parent {
     display: grid;
     grid-gap: 60px;

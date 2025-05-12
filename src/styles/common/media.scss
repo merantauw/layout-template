@@ -468,7 +468,7 @@
     }
   }
   .form-section form.form input {
-    font-size: 18px;
+    font-size: 16px;
   }
   .form-section__title {
     text-align: center;
@@ -657,8 +657,7 @@
 
   .form-section {
     &__container {
-      padding-top: 15px;
-      padding-bottom: 30px;
+      padding: 15px 20px 30px;
     }
   }
 
@@ -670,9 +669,13 @@
     &__item-top {
       flex-direction: row;
     }
+    &__item-title{
+      font-size: 20px;
+    }
 
     &__item-duration {
-      width: 30%;
+      width: 50%;
+      font-size: 18px;
     }
   }
 
@@ -798,6 +801,43 @@
       grid-template-columns: 1fr;
     }
   }
+  .brands__list{
+    justify-content: center;
+  }
+  .brands__link, .brands__btn{
+    font-size: 20px;
+  }
+  .stages{
+    &__item-desc{
+      font-size: 16px;
+    }
+  }
+  .reviews{
+    &__item{
+      gap: 20px;
+    }
+    &__item-text{
+      font-size: 16px;
+    }
+    &__item-top{
+      gap: 20px;
+    }
+    &__item-name{
+      font-size: 20px;
+    }
+  }
+  .faq{
+    &__header p{
+      font-size: 18px;
+    }
+    &__content p{
+      font-size: 16px;
+    }
+  }
+
+  .seo-description{
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -825,8 +865,8 @@
   }
 
   .goods__btn {
-    font-size: 20px;
-    width: 60%;
+    margin-top: 5px;
+    font-size: 14px;
     padding: 10px;
   }
 
