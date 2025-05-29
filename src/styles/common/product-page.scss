@@ -73,7 +73,7 @@
     border-top-right-radius: 10px;
     background-color: #e0dddd78;
     span{
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 400;
       color: rgb(129 124 124);
     }
@@ -90,7 +90,6 @@
   &__buttons{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 0;
     width: 100%;
     .btn{
@@ -132,12 +131,41 @@
 
   &__price{
     max-width: 375px;
+    width: 100%;
+  }
+
+  .mySwiper .swiper-slide{
+    padding: 6px;
+  }
+  .mySwiper .swiper-slide-thumb-active{
+    border: 1px solid #000;
   }
 
   .swiper-slide img,
   .swiper-slide,
   .swiper-slide.active{
     border-radius: 10px !important;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__wrapper-container{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+  }
+  .nav{
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-punkt{
+    flex: 0 0 auto;
+  }
+  .nav-link{
+    padding: 12px;
   }
 }
 

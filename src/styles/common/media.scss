@@ -38,6 +38,20 @@
   .article__button {
     max-width: 100%;
   }
+
+  .product{
+    &__wrapper-container{
+      flex-direction: column;
+    }
+    &__price{
+      position: sticky;
+      top: 100px;
+      align-self: flex-start;
+    }
+    .product__slider-inner{
+      max-width: max-content;
+    }
+  }
 }
 
 @media (max-width: 1540px) {
@@ -102,7 +116,6 @@
 
   .product {
     &__wrapper {
-      flex-direction: column-reverse;
       gap: 75px;
     }
 
@@ -282,6 +295,7 @@
   }
 
   .articles {
+    padding: 0 0 50px;
     &__wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -299,6 +313,7 @@
     &__item {
       flex-direction: column;
       padding: 30px;
+      max-width: 100%;
     }
   }
 
@@ -371,6 +386,21 @@
 
   .slider-container::-webkit-scrollbar {
     display: none;
+  }
+
+  .product{
+    &__wrapper{
+      flex-direction: column;
+    }
+    &__wrapper-container{
+      gap: 50px;
+    }
+    &__price{
+      max-width: 100%;
+      top: 0;
+      position: relative;
+    }
+
   }
 }
 
@@ -459,6 +489,10 @@
 }
 
 @media (max-width: 768px) {
+
+  .row--header:first-child{
+    margin-bottom: 0;
+  }
   h1.title {
     margin-top: 0;
   }
@@ -523,6 +557,12 @@
         object-fit: cover;
       }
     }
+    &__info-title{
+      font-size: 20px;
+    }
+    &__info-text{
+      font-size: 18px;
+    }
   }
 
   .faq__item{
@@ -559,15 +599,17 @@
 
   .goods {
     padding: 25px 0;
+    &__item-stats,
+    &__item-buttons{
+      padding: 0 10px;
+    }
+    .product-links a{
+      padding: 8px 12px;
+    }
   }
 
   .pagination__wrapper {
     margin-top: 50px;
-  }
-
-  .product__stats,
-  .product__description {
-    font-size: 24px;
   }
 
   .catalog{
@@ -577,6 +619,64 @@
     &__item-link{
       padding: 2px 0;
     }
+    &__container{
+      gap: 0;
+    }
+  }
+
+  .filters__toggle{
+    font-size: 24px;
+  }
+  .filters__title{
+    font-size: 20px;
+  }
+
+  .product{
+    &__slider-inner{
+      display: flex;
+      flex-direction: column-reverse;
+      height: auto;
+    }
+    &__swiper-big{
+      max-width: 100%;
+    }
+    &__state span:first-child{
+      max-width: 190px;
+    }
+    &__state .dashed{
+      min-width: 30px;
+    }
+    &__state{
+      font-size: 14px;
+    }
+    &__state span:last-child {
+      flex-shrink: 1;
+      align-self: center;
+      width: 100%;
+      align-items: flex-end;
+      text-align: end;
+    }
+  }
+
+  .mySwiper {
+    overflow: hidden;
+  }
+
+  .mySwiper .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .mySwiper .swiper-slide {
+    width: 75px !important;
+    height: 75px !important;
+    object-fit: cover;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+  .nav-tabs .nav-link{
+    font-size: 18px;
   }
 }
 
@@ -596,8 +696,11 @@
   }
   .cta{
     &__title{
-      font-size: 28px;
+      font-size: 20px;
       padding: 0;
+    }
+    &__btn{
+      font-size: 16px;
     }
     &-inner{
       padding: 100px 0;
@@ -615,20 +718,23 @@
   }
 
   .advantages {
+    i{
+      font-size: 30px;
+    }
     &-list {
       gap: 20px;
     }
-
+    &-item__top{
+      margin-bottom: 10px;
+    }
+    &-item__bottom{
+      font-size: 18px;
+    }
     &-list__item {
       width: calc(100% - 20px);
     }
-
     &-item__number {
-      font-size: 48px;
-    }
-
-    &-item__bottom {
-      font-size: 24px;
+      font-size: 28px;
     }
   }
 
@@ -707,6 +813,9 @@
   .seo-description {
     font-size: 20px;
   }
+  .footer__phone, .footer__email, .footer__address, .footer__list-link{
+    font-size: 20px;
+  }
   .footer {
     &__logo a img {
       max-width: 55%;
@@ -721,6 +830,9 @@
       grid-template-columns: 1fr;
       gap: 30px;
     }
+      &__inner-bottom {
+        font-size: 16px;
+      }
 
   }
   .company__content {
@@ -757,6 +869,15 @@
     }
   }
 
+  .catalog__item-category{
+    font-size: 18px;
+  }
+
+  .articles__info-text{
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
   .company__gallery {
     .div1,
     .div2,
@@ -771,12 +892,23 @@
     padding: 0;
   }
 
-  .articles__info-date {
-    font-size: 24px;
+  .company__text,
+  .team__text{
+      font-size: 18px;
+      line-height: 1.5;
   }
 
-  .product {
-    padding: 50px 0;
+  .team{
+    &__inner{
+      gap: 50px;
+    }
+    &__text{
+      margin-bottom: 30px;
+    }
+  }
+
+  .product, .company, .article, .contacts {
+    padding: 25px 0 50px;
   }
   .product__wrapper {
     gap: 50px;
@@ -793,6 +925,69 @@
   .product__buttons button {
     font-size: 18px;
   }
+
+  .article{
+    &__tags{
+      background-color: #fff;
+      border: 1px solid #000;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 25px 0;
+    }
+    &__tags-list{
+      margin-bottom: 0;
+    }
+    &__content-body{
+      max-width: 100%;
+      padding-right: 0;
+    }
+    &__content{
+      p, span{
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+    &__interestings-title{
+      margin-bottom: 25px;
+    }
+    &__tags-item{
+      font-size: 16px;
+    }
+
+    aside{
+      padding: 0;
+    }
+
+    .article__button{
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+  }
+  .contacts__item-top, .contacts__item-bottom{
+    padding: 20px;
+  }
+  .contacts__label{
+    font-size: 16px;
+  }
+  .contacts__value{
+    font-size: 18px;
+  }
+
+  .systempage{
+    &__wrapper{
+      padding: 20px 20px 20px 25px;
+    }
+    p, span{
+      font-size: 18px;
+    }
+    &__item{
+      font-size: 18px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+  }
 }
 
 @media (max-width: 568px){
@@ -805,7 +1000,7 @@
     justify-content: center;
   }
   .brands__link, .brands__btn{
-    font-size: 20px;
+    font-size: 18px;
   }
   .stages{
     &__item-desc{
@@ -828,11 +1023,19 @@
   }
   .faq{
     &__header p{
-      font-size: 18px;
-    }
-    &__content p{
       font-size: 16px;
     }
+    &__content p{
+      font-size: 14px;
+    }
+    &__icon{
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .product__price-num{
+    font-size: 28px;
   }
 
   .seo-description{
@@ -880,8 +1083,12 @@
     padding: 15px;
   }
   .filters__toggle {
-    font-size: 24px;
+    font-size: 20px;
     padding: 0;
+    margin-bottom: 10px;
+  }
+  .filters__title{
+    font-size: 18px;
   }
   .goods {
     padding-bottom: 50px;
@@ -893,12 +1100,6 @@
     margin: 0 auto;
   }
 
-  .product__stats, .product__description {
-    font-size: 18px;
-  }
-  .product__state span:first-child {
-    max-width: 225px;
-  }
   .tabs {
     padding: 25px 0;
   }
