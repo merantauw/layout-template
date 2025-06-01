@@ -17,16 +17,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!header) return;
 
+    let lastScrollY = window.scrollY;
+
     function toggleHeaderClass() {
-        if (window.scrollY > 117) {
-            header.classList.add("active");
-            headerWrapper.classList.add("active");
-            if (placeholder) placeholder.style.display = "block";
-        } else {
+        const currentScrollY = window.scrollY;
+        const scrollThreshold = 117;
+
+        // Скрываем header при скролле вниз, показываем только при скролле вверх или вверх до начала
+        if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
+            // Скроллим вниз и ниже порога → убираем active
             header.classList.remove("active");
             headerWrapper.classList.remove("active");
             if (placeholder) placeholder.style.display = "none";
+        } else if (currentScrollY <= scrollThreshold || currentScrollY < lastScrollY) {
+            // Скроллим вверх или выше порога → показываем header
+            header.classList.add("active");
+            headerWrapper.classList.add("active");
+            if (placeholder) placeholder.style.display = "block";
         }
+
+        lastScrollY = currentScrollY;
     }
 
     toggleHeaderClass();

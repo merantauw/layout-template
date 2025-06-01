@@ -141,12 +141,17 @@
     border: 1px solid #000;
   }
 
+  .swiper{
+    width: 100%;
+  }
+
   .swiper-slide img,
   .swiper-slide,
   .swiper-slide.active{
     border-radius: 10px !important;
     height: 100%;
     object-fit: cover;
+    object-position: center;
   }
 
   &__wrapper-container{

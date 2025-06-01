@@ -39,19 +39,6 @@
     max-width: 100%;
   }
 
-  .product{
-    &__wrapper-container{
-      flex-direction: column;
-    }
-    &__price{
-      position: sticky;
-      top: 100px;
-      align-self: flex-start;
-    }
-    .product__slider-inner{
-      max-width: max-content;
-    }
-  }
 }
 
 @media (max-width: 1540px) {
@@ -72,17 +59,34 @@
     }
   }
 
-  .catalog{
-    &__list-brands{
+  .catalog {
+    &__list-brands {
       grid-template-columns: repeat(5, 1fr);
     }
   }
+
 }
 
-@media (max-width: 1440px){
-  .catalog{
-    &__item-category{
+@media (max-width: 1440px) {
+  .catalog {
+    &__item-category {
       width: calc((100% - 50px) / 3);
+    }
+  }
+
+  .product {
+    &__wrapper-container {
+      flex-direction: column;
+    }
+
+    &__price {
+      position: sticky;
+      top: 100px;
+      align-self: flex-start;
+    }
+
+    .product__slider-inner {
+      max-width: max-content;
     }
   }
 }
@@ -227,12 +231,12 @@
     }
   }
 
-  .catalog{
-    &__item-category{
+  .catalog {
+    &__item-category {
       width: calc((100% - 25px) / 2);
     }
 
-    &__list-brands{
+    &__list-brands {
       grid-template-columns: repeat(4, 1fr);
     }
   }
@@ -296,6 +300,7 @@
 
   .articles {
     padding: 0 0 50px;
+
     &__wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -388,14 +393,16 @@
     display: none;
   }
 
-  .product{
-    &__wrapper{
+  .product {
+    &__wrapper {
       flex-direction: column;
     }
-    &__wrapper-container{
+
+    &__wrapper-container {
       gap: 50px;
     }
-    &__price{
+
+    &__price {
       max-width: 100%;
       top: 0;
       position: relative;
@@ -474,13 +481,13 @@
   }
 }
 
-@media (max-width: 840px){
-  .catalog{
-    &__item-category{
+@media (max-width: 840px) {
+  .catalog {
+    &__item-category {
       width: 100%;
     }
   }
-  .footer{
+  .footer {
     &__inner-bottom {
       grid-template-columns: 1fr;
       gap: 10px;
@@ -490,7 +497,7 @@
 
 @media (max-width: 768px) {
 
-  .row--header:first-child{
+  .row--header:first-child {
     margin-bottom: 0;
   }
   h1.title {
@@ -557,15 +564,17 @@
         object-fit: cover;
       }
     }
-    &__info-title{
+
+    &__info-title {
       font-size: 20px;
     }
-    &__info-text{
+
+    &__info-text {
       font-size: 18px;
     }
   }
 
-  .faq__item{
+  .faq__item {
     max-width: 100%;
     width: 100%;
   }
@@ -599,11 +608,13 @@
 
   .goods {
     padding: 25px 0;
+
     &__item-stats,
-    &__item-buttons{
+    &__item-buttons {
       padding: 0 10px;
     }
-    .product-links a{
+
+    .product-links a {
       padding: 8px 12px;
     }
   }
@@ -612,43 +623,50 @@
     margin-top: 50px;
   }
 
-  .catalog{
-    &__list-brands{
+  .catalog {
+    &__list-brands {
       grid-template-columns: repeat(2, 1fr);
     }
-    &__item-link{
+
+    &__item-link {
       padding: 2px 0;
     }
-    &__container{
+
+    &__container {
       gap: 0;
     }
   }
 
-  .filters__toggle{
+  .filters__toggle {
     font-size: 24px;
   }
-  .filters__title{
+  .filters__title {
     font-size: 20px;
   }
 
-  .product{
-    &__slider-inner{
+  .product {
+    &__slider-inner {
       display: flex;
       flex-direction: column-reverse;
       height: auto;
     }
-    &__swiper-big{
+
+    &__swiper-big {
       max-width: 100%;
     }
-    &__state span:first-child{
+
+    &__state span:first-child {
       max-width: 190px;
     }
-    &__state .dashed{
+
+    &__state .dashed {
       min-width: 30px;
     }
-    &__state{
+
+    &__state {
       font-size: 14px;
     }
+
     &__state span:last-child {
       flex-shrink: 1;
       align-self: center;
@@ -675,7 +693,7 @@
     flex-shrink: 0;
   }
 
-  .nav-tabs .nav-link{
+  .nav-tabs .nav-link {
     font-size: 18px;
   }
 }
@@ -694,15 +712,17 @@
   .cta {
     padding: 50px 15px;
   }
-  .cta{
-    &__title{
+  .cta {
+    &__title {
       font-size: 20px;
       padding: 0;
     }
-    &__btn{
+
+    &__btn {
       font-size: 16px;
     }
-    &-inner{
+
+    &-inner {
       padding: 100px 0;
     }
   }
@@ -718,21 +738,26 @@
   }
 
   .advantages {
-    i{
+    i {
       font-size: 30px;
     }
+
     &-list {
       gap: 20px;
     }
-    &-item__top{
+
+    &-item__top {
       margin-bottom: 10px;
     }
-    &-item__bottom{
+
+    &-item__bottom {
       font-size: 18px;
     }
+
     &-list__item {
       width: calc(100% - 20px);
     }
+
     &-item__number {
       font-size: 28px;
     }
@@ -775,7 +800,8 @@
     &__item-top {
       flex-direction: row;
     }
-    &__item-title{
+
+    &__item-title {
       font-size: 20px;
     }
 
@@ -813,8 +839,8 @@
   .seo-description {
     font-size: 20px;
   }
-  .footer__phone, .footer__email, .footer__address, .footer__list-link{
-    font-size: 20px;
+  .footer__phone, .footer__email, .footer__address, .footer__list-link {
+    font-size: 18px;
   }
   .footer {
     &__logo a img {
@@ -825,15 +851,24 @@
       max-width: 100%;
     }
 
+    &__inner-left {
+      margin-bottom: 15px;
+    }
+
     &__inner-right {
       display: grid;
       grid-template-columns: 1fr;
       gap: 30px;
     }
-      &__inner-bottom {
-        font-size: 16px;
-      }
 
+    &__inner-bottom {
+      font-size: 16px;
+      padding-top: 25px;
+    }
+    &__item-title{
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
   }
   .company__content {
     padding: 25px;
@@ -869,11 +904,11 @@
     }
   }
 
-  .catalog__item-category{
+  .catalog__item-category {
     font-size: 18px;
   }
 
-  .articles__info-text{
+  .articles__info-text {
     font-size: 14px;
     line-height: 1.5;
   }
@@ -893,22 +928,23 @@
   }
 
   .company__text,
-  .team__text{
-      font-size: 18px;
-      line-height: 1.5;
+  .team__text {
+    font-size: 18px;
+    line-height: 1.5;
   }
 
-  .team{
-    &__inner{
+  .team {
+    &__inner {
       gap: 50px;
     }
-    &__text{
+
+    &__text {
       margin-bottom: 30px;
     }
   }
 
   .product, .company, .article, .contacts {
-    padding: 25px 0 50px;
+    padding: 25px 0;
   }
   .product__wrapper {
     gap: 50px;
@@ -926,64 +962,73 @@
     font-size: 18px;
   }
 
-  .article{
-    &__tags{
+  .article {
+    &__tags {
       background-color: #fff;
       border: 1px solid #000;
       padding: 20px;
       border-radius: 10px;
       margin: 25px 0;
     }
-    &__tags-list{
+
+    &__tags-list {
       margin-bottom: 0;
     }
-    &__content-body{
+
+    &__content-body {
       max-width: 100%;
       padding-right: 0;
     }
-    &__content{
-      p, span{
+
+    &__content {
+      p, span {
         font-size: 16px;
         line-height: 1.5;
       }
     }
-    &__interestings-title{
+
+    &__interestings-title {
       margin-bottom: 25px;
     }
-    &__tags-item{
+
+    &__tags-item {
       font-size: 16px;
     }
 
-    aside{
+    aside {
       padding: 0;
     }
 
-    .article__button{
+    .article__button {
       margin-bottom: 0;
       font-size: 16px;
     }
   }
-  .contacts__item-top, .contacts__item-bottom{
+  .contacts__item-top, .contacts__item-bottom {
     padding: 20px;
   }
-  .contacts__label{
+  .contacts__label {
     font-size: 16px;
   }
-  .contacts__value{
+  .contacts__value {
     font-size: 18px;
   }
 
-  .systempage{
+  .systempage {
     padding: 25px 0 50px;
-    &__wrapper{
+
+    &__wrapper {
       padding: 20px 20px 20px 25px;
     }
-    p, span{
+
+    p, span {
       font-size: 18px;
     }
-    &__item{
+
+    &__item {
       font-size: 18px;
-      &:last-child{
+
+      &:last-child {
         margin-bottom: 0;
       }
     }
@@ -991,56 +1036,72 @@
   }
 }
 
-@media (max-width: 568px){
+@media (max-width: 568px) {
   .catalog {
     &__list-brands {
       grid-template-columns: 1fr;
     }
   }
-  .brands__list{
+  .brands__list {
     justify-content: center;
   }
-  .brands__link, .brands__btn{
+  .brands__link, .brands__btn {
     font-size: 18px;
   }
-  .stages{
-    &__item-desc{
+  .stages {
+    &__item-desc {
       font-size: 16px;
     }
   }
-  .reviews{
-    &__item{
+  .reviews {
+    &__item {
       gap: 20px;
     }
-    &__item-text{
+
+    &__item-text {
       font-size: 16px;
     }
-    &__item-top{
+
+    &__item-top {
       gap: 20px;
     }
-    &__item-name{
+
+    &__item-name {
       font-size: 20px;
     }
   }
-  .faq{
-    &__header p{
+  .faq {
+    &__header p {
       font-size: 16px;
     }
-    &__content p{
+
+    &__content p {
       font-size: 14px;
     }
-    &__icon{
+
+    &__icon {
       width: 18px;
       height: 18px;
     }
   }
 
-  .product__price-num{
+  .product__price-num {
     font-size: 28px;
   }
 
-  .seo-description{
+  .seo-description {
     font-size: 16px;
+  }
+
+  .articles, .article, .advantages, .goods, .cta, .brands, .stages, .form-section, .reviews, .company, .team, .gallery, .contacts, .faq{
+    padding: 25px 0;
+  }
+  .product__stats{
+    margin-bottom: 15px;
+  }
+
+  .swiper-backface-hidden .swiper-slide{
+    height: 340px;
   }
 }
 
@@ -1088,12 +1149,10 @@
     padding: 0;
     margin-bottom: 10px;
   }
-  .filters__title{
+  .filters__title {
     font-size: 18px;
   }
-  .goods {
-    padding-bottom: 50px;
-  }
+
   .goods__list {
     grid-template-columns: 1fr;
   }
